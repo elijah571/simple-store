@@ -12,6 +12,8 @@ const PORT = process.env.PORT || 3000;
 
 // Middlewar
 app.use(express.json());
+app.use(express.static('images')); // Serve images folder statically
+
 // Connect to the database
 connectDB();
 
