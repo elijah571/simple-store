@@ -1,5 +1,6 @@
 // Importing Node.js dependencies
 import express from "express";
+import cors from 'cors';
 import dotenv from "dotenv";
 // Importing custom files
 import { connectDB } from "./dataBase/connectDb.js";
@@ -14,6 +15,7 @@ const PORT = process.env.PORT || 3000;
 
 // Middlewars
 app.use(express.json());
+app.use(cors());
 app.use(express.static('images')); // Serve images folder statically
 
 // Connect to the databases

@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+   background-color: #fff;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    background-color: #000;
+}
+ul{
+    padding:0 40px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+   
+}
+li{
+    margin-left: 18px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 18px;
+}
+li a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+.logo img{
+    width: 100px;
+}
+.cart-icon{
+    margin-right: 40px;
+}
+.cart-icon span{
+    color: white;
+    font-weight: bolder;
+}
+.hero{
+    background-image: url("/frontend/image/banner.jpg");
+  
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 430px;
+   width: 100%;
+}
