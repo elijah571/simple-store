@@ -3,6 +3,8 @@ import express from "express";
 import dotenv from "dotenv";
 // Importing custom files
 import { connectDB } from "./dataBase/connectDb.js";
+import { productRoute } from "./routes/product-route.js";
+import { cartRoute } from "./routes/cart-route.js";
 
 // Initialize dotenv to load environment variables
 dotenv.config();
@@ -10,17 +12,16 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middlewar
+// Middlewars
 app.use(express.json());
 app.use(express.static('images')); // Serve images folder statically
 
-// Connect to the database
+// Connect to the databases
 connectDB();
 
 // Define routes
-app.get("/", (req, res) => {
-    res.send("Hello, Node.js!");
-});
+app.use("/api/store", productRoute);
+app.use("/api/store", cartRoute);
 
 // Start the server
 app.listen(PORT, () => {
