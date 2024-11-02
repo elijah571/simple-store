@@ -35,6 +35,7 @@ li a{
     text-decoration: none;
     font-size: 18px;
 }
+
 .logo img{
     width: 100px;
 }
@@ -45,11 +46,4 @@ li a{
     color: white;
     font-weight: bolder;
 }
-.hero{
-    background-image: url("/frontend/image/banner.jpg");
-  
-   background-size: cover;
-   background-repeat: no-repeat;
-   height: 430px;
-   width: 100%;
-}
+
