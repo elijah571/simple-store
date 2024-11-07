@@ -2,6 +2,7 @@
 import express from "express";
 import cors from 'cors';
 import dotenv from "dotenv";
+
 // Importing custom files
 import { connectDB } from "./dataBase/connectDb.js";
 import { productRoute } from "./routes/product-route.js";
@@ -13,12 +14,12 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middlewars
+// Middleware
 app.use(express.json());
 app.use(cors());
-app.use(express.static('images')); // Serve images folder statically
+app.use('/images', express.static('images')); // Serve images statically from 'images' folder
 
-// Connect to the databases
+// Connect to the database
 connectDB();
 
 // Define routes
